@@ -1,0 +1,45 @@
+server:
+    port: '${PORT:8084}'
+spring:
+    application:
+        name: entrega-app
+    devtools:
+        restart: true
+    security:
+        oauth2:
+            resourceserver:
+                jwt:
+                    issuer-uri: http://localhost:9000
+                    jwk-set-uri: http://localhost:9000/oauth2/jwks
+
+logging:
+    level:
+        com.amazonaws.services.dynamodbv2.datamodeling: DEBUG
+        com.entrega: DEBUG
+        org.springframework.security: TRACE
+
+amazon:
+    aws:
+        accesskey: ${AWS_ACCESS_KEY}
+        secretkey: ${AWS_SECRET_KEY}
+        queueName: ${AWS_QUEUE_NAME}
+    dynamodb:
+        endpoint: ${AWS_END_POINT}
+        # Se estiver usando DynamoDB local, descomente a linha abaixo e comente a linha acima
+        # endpoint: ${AWS_END_POINT_LOCAL}
+        region: ${AWS_REGION}
+
+springdoc:
+    info:
+        title: Microsserviço de Entrega  # Descriptive title for your API
+        version: 1.0.0
+        description: API para gerenciamento de entregas  # Detailed description
+    servers:
+        - url: https://minha-api.com
+    paths-to-match:
+        - /api/**
+    swagger-ui:
+        path: /swagger-ui.html
+    api-docs:
+        path: /api-docs
+        enabled: true

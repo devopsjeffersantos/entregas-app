@@ -1,0 +1,42 @@
+{
+  "idPedido": 48,
+  "cliente": {
+    "id": 1,
+    "nome": "Ricardo Silva",
+    "email": "ricardo@gmail.com",
+    "telefone": "(15) 99611-3355",
+    "endereco": {
+      "logradouro": "Avenida Francisco Matarazzo, 1705",
+      "bairro": "Barra Funda",
+      "estado": "SP",
+      "cidade": "São Paulo",
+      "cep": "05001-200"
+    },
+    "dataNascimento": "11/07/1992",
+    "cpf": "412.138.278-17"
+  },
+  "dataPedido": "16/05/2024 23:35:03",
+  "totalPedido": 5558.50,
+  "formaPagamento": "BOLETO",
+  "validadeFormaPagamentoCartao": "14/35",
+  "pedidoProdutos": [
+    {
+      "idProduto": 1,
+      "descricao": "Iphone 13",
+      "quantidade": 1,
+      "preco": 5500.00
+    },
+    {
+      "idProduto": 2,
+      "descricao": "MacbookPro M1",
+      "quantidade": 1,
+      "preco": 23.50
+    },
+    {
+      "idProduto": 3,
+      "descricao": "Capa de Celular",
+      "quantidade": 10,
+      "preco": 3.50
+    }
+  ]
+}
